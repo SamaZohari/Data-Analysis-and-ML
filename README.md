@@ -39,7 +39,7 @@ A collection of exploratory data analysis (EDA), statistical investigations, and
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Language:** Python
 * **Data Processing:** pandas, NumPy
@@ -49,7 +49,7 @@ A collection of exploratory data analysis (EDA), statistical investigations, and
 
 ---
 
-## 🚀 Setup & Execution
+## Setup & Execution
 
 1. Clone the repository:
 ```bash
