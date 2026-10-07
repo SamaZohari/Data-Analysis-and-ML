@@ -1,27 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Olympic Games Data Analysis</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Analysis & ML Portfolio | Sama Zohari</title>
   <style>
+    :root {
+      --bg: #0d1b1e;
+      --card-bg: #14282c;
+      --teal-primary: #005f73;
+      --mint: #94d2bd;
+      --text: #eaf1f1;
+      --muted: #8ba3a6;
+      --border: #1e3a3f;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      background-color: #eaf1f1;
+      background-color: var(--bg);
+      color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      margin: 0; padding: 40px 20px;
-      display: flex; flex-direction: column; align-items: center; gap: 40px;
+      line-height: 1.6;
+      padding: 48px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .chart-card {
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-      padding: 16px; max-width: 850px; width: 100%;
+
+    header {
+      text-align: center;
+      max-width: 860px;
+      margin-bottom: 40px;
     }
-    img { width: 100%; height: auto; border-radius: 8px; display: block; }
+
+    h1 {
+      font-size: 2.2rem;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+
+    p.subtitle {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+    }
+
+    .repo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: var(--mint);
+      text-decoration: none;
+      transition: border-color 0.2s ease;
+    }
+    .repo-badge:hover {
+      border-color: var(--mint);
+    }
+
+    main {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .card-header {
+      margin-bottom: 16px;
+    }
+
+    .card-header h2 {
+      font-size: 1.35rem;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .card-header p {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .img-container {
+      width: 100%;
+      background: #091315;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin-top: 12px;
+    }
+
+    .img-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--mint); text-decoration: none; }
   </style>
 </head>
 <body>
-  <div class="chart-card"><img src="fig_gen.png" alt="Medals over Years"></div>
-  <div class="chart-card"><img src="fig_top10.png" alt="Top 10 Countries"></div>
-  <div class="chart-card"><img src="fig_SVK.png" alt="Medals by Sport"></div>
+
+  <header>
+    <h1>Data Analysis & Machine Learning</h1>
+    <p class="subtitle">Exploratory data analysis, statistical modeling, and automated pipelines.</p>
+    <a class="repo-badge" href="https://github.com/SamaZohari/Data-Analysis-and-ML" target="_blank" rel="noopener">
+      <span>↗</span> GitHub: SamaZohari/Data-Analysis-and-ML
+    </a>
+  </header>
+
+  <main>
+    <!-- Visualization 1 -->
+    <article class="project-card">
+      <div class="card-header">
+        <h2>1. Gender Participation Trajectory (1896 – Present)</h2>
+        <p>Tracking the historical shift in medals won between male and female competitors over Olympic history.</p>
+      </div>
+      <div class="img-container">
+        <!-- Relative path pointing to the olympics subfolder -->
+        <img src="olympics-data-analysis/fig_gen.png" alt="Male and Female Won Medals over the Years" loading="lazy" />
+      </div>
+    </article>
+
+    <!-- Visualization 2 -->
+    <article class="project-card">
+      <div class="card-header">
+        <h2>2. All-Time Gold Medal Dominance</h2>
+        <p>Top 10 performing nations ranked by cumulative all-time Olympic gold medal count.</p>
+      </div>
+      <div class="img-container">
+        <img src="olympics-data-analysis/fig_top10.png" alt="Top 10 Countries with the Most Gold Medals" loading="lazy" />
+      </div>
+    </article>
+
+    <!-- Visualization 3 -->
+    <article class="project-card">
+      <div class="card-header">
+        <h2>3. Discipline & Medal Tier Breakdown (Slovakia)</h2>
+        <p>Sunburst / nested donut chart detailing sport distribution and podium results for SVK.</p>
+      </div>
+      <div class="img-container">
+        <img src="olympics-data-analysis/fig_SVK.png" alt="Count of Medals in each Sport - Slovakia" loading="lazy" />
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>Repository: <a href="https://github.com/SamaZohari/Data-Analysis-and-ML" target="_blank">SamaZohari / Data-Analysis-and-ML</a></p>
+  </footer>
+
 </body>
 </html>
