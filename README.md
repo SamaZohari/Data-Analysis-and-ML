@@ -46,33 +46,14 @@ The dataset (`Olympics-Data.csv`) records Olympic medalists with the following a
 | Field | Description |
 | --- | --- |
 | `Year` | Olympic edition year (1896 onwards)
-
- |
 | `City` | Host city (e.g., Athens, London, Beijing)
-
- |
 | `Sport` | Core Olympic sport category (e.g., Aquatics, Canoeing)
-
- |
 | `Discipline` | Specific sporting discipline (e.g., Swimming, Diving)
-
- |
 | `Athlete` | Competitor name
-
- |
 | `Country` | Three-letter IOC country code (e.g., USA, HUN, SVK)
-
- |
 | `Gender` | Athlete gender (`Men` / `Women`)
-
- |
 | `Event` | Specific competitive event
-
- |
 | `Medal` | Result achieved (`Gold`, `Silver`, `Bronze`)
-
- |
-
 ---
 
 ## Tech Stack & Setup
